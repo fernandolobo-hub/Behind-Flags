@@ -13,9 +13,13 @@ class Quiz: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .red
     }
     
 
+    @IBAction func answer(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
