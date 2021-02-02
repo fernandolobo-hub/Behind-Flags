@@ -129,7 +129,7 @@ class HomeConstraints {
     }
     
     func setupView() {
-        viewController.view.backgroundColor = .cyan
+        viewController.view.backgroundColor = .gray
         viewController.view.addSubview(homeFlags)
         viewController.view.addSubview(world)
         viewController.view.addSubview(playButton)
