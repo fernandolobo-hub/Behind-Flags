@@ -12,7 +12,8 @@ let quizScreen = QuizScreen()
 class QuizScreen: UIViewController {
     
     let questionBank: QuestionBank = QuestionBank()
-    var questionNumber: Int = 0
+    var questionIndex: Int = 0
+    var questionNumber: Int = 1
     var score: Int = 0
     var selectedAnswer: String = ""
     var allQuestions: [Question] = []
@@ -53,8 +54,9 @@ class QuizScreen: UIViewController {
     @objc func answerPressed(_ sender:UIButton!) {
         if sender.currentTitle == selectedAnswer {
             score += 1
-            Defaults.instance.answeredCorrectly.append(allQuestions[questionNumber - 1])
+            Defaults.instance.answeredCorrectly.append(allQuestions[questionIndex])
         }
+        questionIndex += 1
         questionNumber += 1
         updateUI()
         
@@ -63,17 +65,17 @@ class QuizScreen: UIViewController {
     func updateQuestion() {
         
         
-        if questionNumber < allQuestions.count{
-            let alternatives = allQuestions[questionNumber].allAlternatives.shuffled()
-            quizConstraints.flagImage.image = UIImage(named: allQuestions[questionNumber].country)
-            quizConstraints.questionLabel.text = allQuestions[questionNumber].question
-            quizConstraints.countryLabel.text = allQuestions[questionNumber].country
+        if questionIndex < allQuestions.count{
+            let alternatives = allQuestions[questionIndex].allAlternatives.shuffled()
+            quizConstraints.flagImage.image = UIImage(named: allQuestions[questionIndex].country)
+            quizConstraints.questionLabel.text = allQuestions[questionIndex].question
+            quizConstraints.countryLabel.text = allQuestions[questionIndex].country
             quizConstraints.optionA.setTitle(alternatives[0], for: UIControl.State.normal)
             quizConstraints.optionB.setTitle(alternatives[1], for: UIControl.State.normal)
             quizConstraints.optionC.setTitle(alternatives[2], for: UIControl.State.normal)
             quizConstraints.optionD.setTitle(alternatives[3], for: UIControl.State.normal)
-            selectedAnswer = allQuestions[questionNumber].correctAnswer
-            print(allQuestions[questionNumber].allAlternatives)
+            selectedAnswer = allQuestions[questionIndex].correctAnswer
+            print(allQuestions[questionIndex].allAlternatives)
         } else {
             if score > 5 && score < 8 {
                 alertMessage = "Great job! You are almost there"
@@ -95,13 +97,14 @@ class QuizScreen: UIViewController {
     
     func updateUI() {
         quizConstraints.scoreLabel.text = "Score: \(score)"
-        quizConstraints.questionCounter.text = "\(questionNumber + 1)/10"
+        quizConstraints.questionCounter.text = "\(questionNumber)/10"
         updateQuestion()
     }
     
     func restartQuiz() {
         score = 0
-        questionNumber = 0
+        questionIndex = 0
+        questionNumber = 1
         allQuestions = questionBank.generateAlternatives(list: questionBank.question)
         updateQuestion()
         updateUI()
