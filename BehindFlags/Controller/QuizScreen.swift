@@ -10,7 +10,7 @@ import UIKit
 let quizScreen = QuizScreen()
 
 class QuizScreen: UIViewController {
-
+    
     let questionBank: QuestionBank = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
@@ -31,34 +31,33 @@ class QuizScreen: UIViewController {
         updateUI()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(false)
-//        allQuestions = questionBank.generateAlternatives(list: questionBank.question)
-//        restartQuiz()
-//    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(false)
+    //        allQuestions = questionBank.generateAlternatives(list: questionBank.question)
+    //        restartQuiz()
+    //    }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
     
     @objc func answerPressed(_ sender:UIButton!) {
         if sender.currentTitle == selectedAnswer {
             score += 1
+            Defaults.instance.answeredCorrectly.append(allQuestions[questionNumber - 1])
         }
-       
         questionNumber += 1
         updateUI()
-        print(questionNumber)
-        print(allQuestions.count)
+        
     }
     
     func updateQuestion() {
@@ -85,10 +84,12 @@ class QuizScreen: UIViewController {
             quizConstraints.questionCounter.text = "10/10"
             let alert = UIAlertController(title: "Finished", message: "Result:\(score)/10\n\(alertMessage)", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { action in
-                self.restartQuiz()})
+                                                self.navigationController?.popViewController(animated: true)
+                self.restartQuiz()
+            })
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
-//            self.navigationController?.pushViewController(ResultsScreen(), animated: true)
+            //            self.navigationController?.pushViewController(ResultsScreen(), animated: true)
         }
     }
     
@@ -111,5 +112,5 @@ class QuizScreen: UIViewController {
             button.addTarget(self, action: #selector(answerPressed(_:)), for: .touchUpInside)
         }
     }
-
+    
 }
