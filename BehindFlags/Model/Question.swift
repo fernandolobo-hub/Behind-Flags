@@ -21,7 +21,7 @@ enum typeQuestion: String {
 }
 
 
-class Question: Equatable {
+class Question: Equatable, Codable {
     
     static func == (lhs: Question, rhs: Question) -> Bool {
         return
@@ -40,7 +40,7 @@ class Question: Equatable {
     var allAlternatives: [String] {
         var allAlternatives = wrongAlternatives
         allAlternatives.append(correctAnswer)
-        return allAlternatives.shuffled()
+        return allAlternatives
     }
     
     init(country: String, question: String, wrongAlternatives: [String], correctAnswer: String) {

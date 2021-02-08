@@ -13,11 +13,20 @@
 		242CB9A725B7207D005EED26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242CB9A525B7207D005EED26 /* Main.storyboard */; };
 		242CB9A925B7207F005EED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242CB9A825B7207F005EED26 /* Assets.xcassets */; };
 		242CB9AC25B7207F005EED26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242CB9AA25B7207F005EED26 /* LaunchScreen.storyboard */; };
+		243679B225D06BC200CE497C /* ProgressScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243679B125D06BC200CE497C /* ProgressScreen.swift */; };
+		243679B525D0B11600CE497C /* ProgressConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243679B425D0B11600CE497C /* ProgressConstraints.swift */; };
 		2451A84C25C899C000A3F8EB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451A84B25C899C000A3F8EB /* HomeScreen.swift */; };
 		2451A85825C993FB00A3F8EB /* HomeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451A85725C993FB00A3F8EB /* HomeConstraints.swift */; };
+		2461BFDE25CD827C00D7DEFD /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461BFDD25CD827C00D7DEFD /* BackgroundColor.swift */; };
+		2461BFE425CDD67400D7DEFD /* ResultsConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461BFE325CDD67400D7DEFD /* ResultsConstraints.swift */; };
+		2461BFE825CDD69100D7DEFD /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461BFE725CDD69100D7DEFD /* ResultsScreen.swift */; };
+		2467090925C9C9C6009A74E5 /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467090825C9C9C6009A74E5 /* QuizScreen.swift */; };
+		2467090C25C9D1E4009A74E5 /* QuizConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467090B25C9D1E4009A74E5 /* QuizConstraints.swift */; };
 		246AF7E925C48C4B006CA6C2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AF7E825C48C4B006CA6C2 /* QuestionBank.swift */; };
+		248181B525CFCCC0002BA0A1 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248181B425CFCCC0002BA0A1 /* UserDefaults.swift */; };
 		2481FCD925C9AB3500E1BA6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481FCD825C9AB3500E1BA6A /* Constants.swift */; };
 		24D2455225BB5E4100CEAF96 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2455125BB5E4100CEAF96 /* Question.swift */; };
+		24EB57B725CC34B800B2AA6B /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EB57B625CC34B800B2AA6B /* OptionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +38,20 @@
 		242CB9A825B7207F005EED26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		242CB9AB25B7207F005EED26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		242CB9AD25B7207F005EED26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243679B125D06BC200CE497C /* ProgressScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressScreen.swift; sourceTree = "<group>"; };
+		243679B425D0B11600CE497C /* ProgressConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressConstraints.swift; sourceTree = "<group>"; };
 		2451A84B25C899C000A3F8EB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		2451A85725C993FB00A3F8EB /* HomeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstraints.swift; sourceTree = "<group>"; };
+		2461BFDD25CD827C00D7DEFD /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		2461BFE325CDD67400D7DEFD /* ResultsConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsConstraints.swift; sourceTree = "<group>"; };
+		2461BFE725CDD69100D7DEFD /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
+		2467090825C9C9C6009A74E5 /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
+		2467090B25C9D1E4009A74E5 /* QuizConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConstraints.swift; sourceTree = "<group>"; };
 		246AF7E825C48C4B006CA6C2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		248181B425CFCCC0002BA0A1 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2481FCD825C9AB3500E1BA6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24D2455125BB5E4100CEAF96 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		24EB57B625CC34B800B2AA6B /* OptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				2451A85725C993FB00A3F8EB /* HomeConstraints.swift */,
+				2467090B25C9D1E4009A74E5 /* QuizConstraints.swift */,
+				2461BFE325CDD67400D7DEFD /* ResultsConstraints.swift */,
+				243679B425D0B11600CE497C /* ProgressConstraints.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -87,9 +108,12 @@
 		2451A85425C993C000A3F8EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				242CB9A125B7207D005EED26 /* SceneDelegate.swift */,
 				242CB99F25B7207D005EED26 /* AppDelegate.swift */,
 				2451A84B25C899C000A3F8EB /* HomeScreen.swift */,
-				242CB9A125B7207D005EED26 /* SceneDelegate.swift */,
+				2467090825C9C9C6009A74E5 /* QuizScreen.swift */,
+				2461BFE725CDD69100D7DEFD /* ResultsScreen.swift */,
+				243679B125D06BC200CE497C /* ProgressScreen.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,6 +123,8 @@
 			children = (
 				2451A85325C993AB00A3F8EB /* Constraints */,
 				242CB9A525B7207D005EED26 /* Main.storyboard */,
+				24EB57B625CC34B800B2AA6B /* OptionButton.swift */,
+				2461BFDD25CD827C00D7DEFD /* BackgroundColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +136,7 @@
 				2404D44825B9C42C00A01EEC /* NavigationBar.swift */,
 				24D2455125BB5E4100CEAF96 /* Question.swift */,
 				246AF7E825C48C4B006CA6C2 /* QuestionBank.swift */,
+				248181B425CFCCC0002BA0A1 /* UserDefaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,13 +211,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2461BFE825CDD69100D7DEFD /* ResultsScreen.swift in Sources */,
 				2404D44925B9C42C00A01EEC /* NavigationBar.swift in Sources */,
+				2461BFE425CDD67400D7DEFD /* ResultsConstraints.swift in Sources */,
+				2467090C25C9D1E4009A74E5 /* QuizConstraints.swift in Sources */,
 				242CB9A025B7207D005EED26 /* AppDelegate.swift in Sources */,
+				243679B525D0B11600CE497C /* ProgressConstraints.swift in Sources */,
+				24EB57B725CC34B800B2AA6B /* OptionButton.swift in Sources */,
 				2451A84C25C899C000A3F8EB /* HomeScreen.swift in Sources */,
 				2451A85825C993FB00A3F8EB /* HomeConstraints.swift in Sources */,
 				24D2455225BB5E4100CEAF96 /* Question.swift in Sources */,
+				2461BFDE25CD827C00D7DEFD /* BackgroundColor.swift in Sources */,
+				2467090925C9C9C6009A74E5 /* QuizScreen.swift in Sources */,
+				248181B525CFCCC0002BA0A1 /* UserDefaults.swift in Sources */,
 				242CB9A225B7207D005EED26 /* SceneDelegate.swift in Sources */,
 				246AF7E925C48C4B006CA6C2 /* QuestionBank.swift in Sources */,
+				243679B225D06BC200CE497C /* ProgressScreen.swift in Sources */,
 				2481FCD925C9AB3500E1BA6A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,15 +375,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 243KAJ72F6;
 				INFOPLIST_FILE = BehindFlags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fernandolobo.BehindFlags;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandolobo.BehindFlags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -357,15 +395,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 243KAJ72F6;
 				INFOPLIST_FILE = BehindFlags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fernandolobo.BehindFlags;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandolobo.BehindFlags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

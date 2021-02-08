@@ -11,9 +11,6 @@ let homeConstraints = HomeConstraints()
 
 class HomeConstraints {
     
-    
-    var viewController = UIViewController()
-    
     var playButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage.playbutton(), for: .normal)
@@ -34,7 +31,6 @@ class HomeConstraints {
         button.setImage(UIImage.progressbutton(), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
-        
     }()
     
     var progressButtonLabel: UILabel = {
@@ -68,7 +64,7 @@ class HomeConstraints {
     
     
     
-    func playButtonConstraints() {
+    func playButtonConstraints(viewController: UIViewController) {
         NSLayoutConstraint.activate([
             playButton.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
             //Determines the button distance from the progress button
@@ -76,7 +72,7 @@ class HomeConstraints {
         ])
     }
     
-    func progressButtonConstraints() {
+    func progressButtonConstraints(viewController: UIViewController) {
         //Good practice center the below button in relation to the top button
         NSLayoutConstraint.activate([
             progressButton.centerXAnchor.constraint(equalTo: playButton.centerXAnchor),
@@ -84,7 +80,7 @@ class HomeConstraints {
         ])
     }
     
-    func worldConstraints() {
+    func worldConstraints(viewController: UIViewController) {
         NSLayoutConstraint.activate([
             world.centerYAnchor.constraint(equalTo: viewController.view.bottomAnchor),
             world.widthAnchor.constraint(equalToConstant: world.layer.bounds.width),
@@ -95,21 +91,21 @@ class HomeConstraints {
         ])
     }
     
-    func appTitleConstraints() {
+    func appTitleConstraints(viewController: UIViewController) {
         NSLayoutConstraint.activate([
             appTitle.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
-            appTitle.topAnchor.constraint(equalTo: viewController.view.layoutMarginsGuide.topAnchor, constant: 40),
+            appTitle.topAnchor.constraint(equalTo: viewController.view.layoutMarginsGuide.topAnchor, constant: screenSize.height/20 - 40),
             appTitle.leadingAnchor.constraint(equalTo: viewController.view.layoutMarginsGuide.leadingAnchor, constant: 20),
             appTitle.trailingAnchor.constraint(equalTo: viewController.view.layoutMarginsGuide.trailingAnchor, constant: -20)
         ])
     }
     
-    func addHomeFlagsConstraints() {
+    func addHomeFlagsConstraints(viewController: UIViewController) {
         let topConstraint = homeFlags.topAnchor.constraint(greaterThanOrEqualTo: appTitle.bottomAnchor)
         topConstraint.priority = UILayoutPriority(250)
         NSLayoutConstraint.activate([
             homeFlags.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
-            homeFlags.bottomAnchor.constraint(equalTo: world.topAnchor, constant: 10),
+            homeFlags.bottomAnchor.constraint(equalTo: world.topAnchor, constant: 20),
             topConstraint
         ])
     }
@@ -128,8 +124,7 @@ class HomeConstraints {
         ])
     }
     
-    func setupView() {
-        viewController.view.backgroundColor = .gray
+    func setupView(viewController: UIViewController) {
         viewController.view.addSubview(homeFlags)
         viewController.view.addSubview(world)
         viewController.view.addSubview(playButton)
@@ -138,18 +133,16 @@ class HomeConstraints {
         viewController.view.addSubview(progressButton)
         progressButton.addSubview(progressButtonLabel)
         viewController.view.addSubview(appTitle)
-        playButton.addTarget(self, action: #selector(startQuiz(sender:)), for: .touchUpInside)
-        playButtonConstraints()
-        progressButtonConstraints()
-        worldConstraints()
-        appTitleConstraints()
-        addHomeFlagsConstraints()
+        playButtonConstraints(viewController: viewController)
+        progressButtonConstraints(viewController: viewController)
+        worldConstraints(viewController: viewController)
+        appTitleConstraints(viewController: viewController)
+        addHomeFlagsConstraints(viewController: viewController)
         addPlayButtonLabelConstraints()
         addProgressButtonLabelConstraints()
     }
     
-    @objc func startQuiz(sender: UIButton) {
-        print("Start Quiz")
-    }
+
+
     
 }
